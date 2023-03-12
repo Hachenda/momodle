@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #303030;
+}
+
+div#game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #edffc2;
+}
+
+select,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border: 2px solid #000000;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+#game #imagen {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 720px;
+  height: 480px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  margin-inline: 2%;
+}
+
+footer a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+footer #sobre-mi {
+  text-align: center;
+  float: left;
+}
+
+footer #comparte {
+  text-align: center;
+  float: right;
+}
+
+.icon {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(20deg) brightness(107%) contrast(101%);
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 50px;
+  height: 50px;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  filter: invert(96%) sepia(5%) saturate(18%) hue-rotate(329deg) brightness(78%) contrast(81%);
+}
+
+@media screen and (min-width: 768px) {
+  div#game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  div#game {
+    display: block;
+    text-align: center;
+  }
+
+  #game #imagen {
+    width: 95%;
+    height: 95%;
+  }
+
+  select,
+  button {
+    width: 80%;
+  }
+}
