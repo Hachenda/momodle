@@ -14,7 +14,6 @@ const momos = [
   { nombre: 'Lo harías por una scoobygalleta?', imagen: 'lo_harias_por_una_scoobygalleta.jpg' },
   { nombre: 'Los modales hacen al hombre', imagen: 'los_modales.jpg' },
   { nombre: 'Matematicas hijo', imagen: 'matematicas_hijo.jpg' },
-  { nombre: 'No lo digo yo, lo dice la ciencia', imagen: 'no_lo_digo_yo.jpg' },
   { nombre: 'No lo sé, Rick', imagen: 'no_lo_se_rick.jpg' },
   { nombre: 'Oh no mis lentes de contacto', imagen: 'lentes_de_conacto.jpg' },
   { nombre: 'Oye Parker estás demente', imagen: 'oye_parker.jpg' },
@@ -83,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   vidas.innerText = `Vidas: ❤️❤️❤️❤️`;
   botonAdivinar.innerText = "Adivinar";
   aciertos.innerText = aciertosCount;
+  aciertos.style.textAlign = "center";
   botonNext.innerText = "NEXT";
   botonNext.style.display = "none";
   feedback.style.display = "none";
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     game.removeChild(imagen);
     habilitarBotones();
     momoElegido = nuevoMomo();
-    aciertos.style.display = "flex";
+    select.value = 'Seleccionar momo';
   });
 
   botonAdivinar.addEventListener('click', () => {
@@ -137,7 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.style.display = "flex";
         imagen.src = `images/victoria.jpg`;
       } else {
-        botonNext.style.display = "flex";
+        blur = blurMax;
+        botonNext.style.display = "initial";
       }
     } else {
       quitarCensuraParcial();

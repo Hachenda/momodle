@@ -32,6 +32,7 @@ button {
   border: 2px solid #000000;
   border-radius: 0.25em;
   cursor: pointer;
+  z-index: 1;
 }
 
 #game #imagen {
@@ -47,6 +48,7 @@ footer {
   bottom: 0;
   width: 95%;
   margin-inline: 2%;
+  z-index: 0;
 }
 
 footer a {
@@ -57,11 +59,13 @@ footer a {
 footer #sobre-mi {
   text-align: center;
   float: left;
+  z-index: 0;
 }
 
 footer #comparte {
   text-align: center;
   float: right;
+  z-index: 0;
 }
 
 .icon {
